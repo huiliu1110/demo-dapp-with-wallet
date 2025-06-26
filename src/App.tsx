@@ -18,7 +18,7 @@ function App() {
             imageUrl:
               "https://raw.githubusercontent.com/tonkeeper/tonkeeper-web/0f197474c57937787608697e794ef2b20a62f0d4/apps/twa/public/logo-128x128.png",
             aboutUrl: "https://token.im",
-            universalLink: "https://connect.token.im/link",
+            universalLink: "https://connect.token.im/link/ton-connect",
             bridgeUrl: "https://bridge.tonapi.io/bridge",
             jsBridgeKey: "tonkeeper",
             platforms: ["ios", "android"],
