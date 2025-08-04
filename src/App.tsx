@@ -13,15 +13,40 @@ function App() {
       walletsListConfiguration={{
         includeWallets: [
           {
-            appName: "imtoken",
-            name: "imToken",
-            imageUrl:
-              "https://raw.githubusercontent.com/tonkeeper/tonkeeper-web/0f197474c57937787608697e794ef2b20a62f0d4/apps/twa/public/logo-128x128.png",
-            aboutUrl: "https://token.im",
-            universalLink: "https://connect.token.im/link/ton-connect",
-            bridgeUrl: "https://bridge.tonapi.io/bridge",
-            jsBridgeKey: "tonkeeper",
+            appName: "imToken",
+            name: "imToken staging",
+            imageUrl: "https://aws-v2-cdn.token.im/brand/imToken-logo.png",
+            aboutUrl: "https://token.im/",
+            universalLink: "https://connect.imstaging.works/link/ton-connect",
+            deepLink: "imtokenv2://link/ton-connect",
+            jsBridgeKey: "imTokenTon",
+            bridgeUrl: "https://connect.imstaging.works/tonbridge",
             platforms: ["ios", "android"],
+            features: [
+              {
+                name: "SendTransaction",
+                maxMessages: 4,
+                extraCurrencySupported: false,
+              },
+            ],
+          },
+          {
+            appName: "imToken",
+            name: "imToken production",
+            imageUrl: "https://aws-v2-cdn.token.im/brand/imToken-logo.png",
+            aboutUrl: "https://token.im/",
+            universalLink: "https://connect.token.im/link/ton-connect",
+            deepLink: "imtokenv2://link/ton-connect",
+            jsBridgeKey: "imTokenTon",
+            bridgeUrl: "https://connect.token.im/tonbridge",
+            platforms: ["ios", "android"],
+            features: [
+              {
+                name: "SendTransaction",
+                maxMessages: 4,
+                extraCurrencySupported: false,
+              },
+            ],
           },
           {
             appName: "tonwallet",
