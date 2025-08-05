@@ -5,8 +5,12 @@ import { Footer } from "./components/Footer/Footer";
 import { Header } from "./components/Header/Header";
 import { TxForm } from "./components/TxForm/TxForm";
 import { TonProofDemo } from "./components/TonProofDemo/TonProofDemo";
+import { useState } from "react";
 
 function App() {
+  // 添加一个开关，用于控制是否显示TonProofDemo
+  const [showTonProofDemo, setShowTonProofDemo] = useState(false);
+
   return (
     <TonConnectUIProvider
       manifestUrl="https://ton-connect.github.io/demo-dapp-with-wallet/tonconnect-manifest.json"
@@ -402,7 +406,10 @@ function App() {
       <div className="app">
         <Header />
         <TxForm />
-        <TonProofDemo />
+        {showTonProofDemo && <TonProofDemo />}
+        <button onClick={() => setShowTonProofDemo(!showTonProofDemo)}>
+          {showTonProofDemo ? "Hide TonProofDemo" : "Show TonProofDemo"}
+        </button>
         <Footer />
       </div>
     </TonConnectUIProvider>
